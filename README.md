@@ -1,8 +1,8 @@
-# Esp32C3_DeepSleep Library
+# Esp32-C3_DeepSleep Library
 
 A simple and robust Arduino library for using the deep sleep features of the ESP32-C3, abstracting away the complexities of the ESP-IDF.
 
-This library was specifically developed and tested for ESP32-C3 based boards, such as the Waveshare ESP32-C3-Zero.
+This library was specifically developed and tested for ESP32-C3 based boards, such as the **Waveshare ESP32-C3-Zero**.
 
 ## Key Features
 
