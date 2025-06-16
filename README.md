@@ -78,37 +78,55 @@ void loop() {
   // This is never reached
 }
 
-API Reference
-Wakeup Configuration
-void addWakeupPin(uint8_t gpioPin, bool wakeOnHigh)
-:   Configures a single GPIO pin as a wakeup source. Multiple calls will add pins to the wakeup mask. All pins must share the same wakeup level (HIGH or LOW).
+```
+## API Reference
 
-void clearWakeupPins()
-:   Resets all configured GPIO wakeup sources.
+### Wakeup Configuration
 
-void beginTimerWakeup(uint64_t timeUs)
-:   Configures the timer to wake the chip up after a specified time in microseconds. Calling this function signals the library to keep RTC memory powered on during sleep.
+```void addWakeupPin(uint8_t gpioPin, bool wakeOnHigh)```
 
-GPIO State Management
-void holdGPIO(uint8_t gpioPin)
-:   Latches the current state of an RTC-capable GPIO pin, preserving its level through deep sleep. You must set the pin's state with digitalWrite() before calling this function.
+Configures a single GPIO pin as a wakeup source. Multiple calls will add pins to the wakeup mask. All pins must share the same wakeup level (HIGH or LOW).
 
-void releaseAllHolds()
-:   Releases all active GPIO holds, allowing the pins to be controlled normally again. This is typically called right after waking up.
+```void clearWakeupPins()```
 
-Sleep Control & Information
-esp_sleep_wakeup_cause_t wakeupCause()
-:   Returns the reason for waking up from sleep (e.g., ESP_SLEEP_WAKEUP_TIMER, ESP_SLEEP_WAKEUP_GPIO).
+Resets all configured GPIO wakeup sources.
 
-void goDeepSleep()
-:   Immediately enters deep sleep. This function automatically optimizes power domains based on the configured wakeup sources and does not return.
+```void beginTimerWakeup(uint64_t timeUs)```
 
-Examples
+Configures the timer to wake the chip up after a specified time in microseconds. Calling this function signals the library to keep RTC memory powered on during sleep.
+
+### GPIO State Management
+
+```void holdGPIO(uint8_t gpioPin)```
+
+Latches the current state of an RTC-capable GPIO pin, preserving its level through deep sleep. You must set the pin's state with digitalWrite() before calling this function.
+
+```void releaseAllHolds()```
+
+Releases all active GPIO holds, allowing the pins to be controlled normally again. This is typically called right after waking up.
+
+### Sleep Control & Information
+
+```esp_sleep_wakeup_cause_t wakeupCause()```
+
+Returns the reason for waking up from sleep (e.g., ESP_SLEEP_WAKEUP_TIMER, ESP_SLEEP_WAKEUP_GPIO).
+
+```void goDeepSleep()```
+
+Immediately enters deep sleep. This function automatically optimizes power domains based on the configured wakeup sources and does not return.
+
+## Examples
+
 For more detailed usage, please see the sketches in the examples folder:
 
-TimerWakeup: Demonstrates a simple wakeup by timer.
-PinWakeup: Shows how to wake up from a single GPIO pin.
-HoldPin: Illustrates how to keep an LED on during deep sleep.
-AdvancedScenario: A comprehensive example combining all major library features.
-License
+- TimerWakeup: Demonstrates a simple wakeup by timer.
+
+- PinWakeup: Shows how to wake up from a single GPIO pin.
+
+- HoldPin: Illustrates how to keep an LED on during deep sleep.
+
+- AdvancedScenario: A comprehensive example combining all major library features.
+
+## License
+
 This project is licensed under the MIT License.
