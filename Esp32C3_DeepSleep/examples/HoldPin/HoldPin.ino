@@ -1,6 +1,6 @@
 /**
  * @file HoldPin.ino
- * @author Dein Name
+ * @author junk495
  * @date 16. June 2025
  * @brief Example for holding a GPIO pin's state during deep sleep.
  *
