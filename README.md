@@ -19,15 +19,22 @@ The recommended method is to place the entire library folder (`Esp32C3_DeepSleep
 
 Your project structure should look like this:
 
-Your_Project/
-├── platformio.ini
-├── src/
-│   └── main.cpp
-└── lib/
-└── Esp32C3_DeepSleep/
-├── Esp32C3_DeepSleep.h
-├── Esp32C3_DeepSleep.cpp
-└── library.properties
+- Your_Project
+  - lib
+    - Esp32C3_DeepSleep
+      - Esp32C3_DeepSleep.h
+      - Esp32C3_DeepSleep.cpp
+      - library.properties
+      - keywords.txt
+      - examples
+        - TimerWakeup
+          - TimerWakeup.ino
+        - PinWakeup
+          - PinWakeup.ino
+        - AdvancedScenario
+          - AdvancedScenario.ino
+        - HoldPin
+          - HoldPin.ino
 
 ### Arduino IDE
 
