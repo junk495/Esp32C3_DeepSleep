@@ -1,6 +1,6 @@
 /**
  * @file PinWakeup.ino
- * @author Dein Name
+ * @author junk495
  * @date 16. June 2025
  * @brief Example for waking up the ESP32-C3 from deep sleep using a GPIO pin.
  *
