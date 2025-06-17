@@ -166,13 +166,9 @@ Immediately enters deep sleep. This function automatically optimizes power domai
 ## Examples
 
 For more detailed usage, please see the sketches in the examples folder:
-
 - TimerWakeup: Demonstrates a simple wakeup by timer.
-
 - PinWakeup: Shows how to wake up from a single GPIO pin.
-
 - HoldPin: Illustrates how to keep an LED on during deep sleep.
-
 - AdvancedScenario: A comprehensive example combining all major library features.
 
 ## License
