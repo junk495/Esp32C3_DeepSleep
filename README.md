@@ -69,6 +69,8 @@ Your project structure should look like this:
 Here is a simple example demonstrating a combined timer and pin wakeup.
 
 ```cpp
+// main.cpp
+
 #include <Arduino.h>
 #include "Esp32C3_DeepSleep.h"
 
@@ -108,6 +110,23 @@ void loop() {
 }
 
 ```
+
+```ini
+// platformio.ini
+
+[env:esp32-c3-devkitc-02]
+platform = espressif32
+board = esp32-c3-devkitc-02
+framework = arduino
+
+monitor_speed = 115200
+
+build_flags = 
+    -D ARDUINO_USB_MODE=1
+    -D ARDUINO_USB_CDC_ON_BOOT=1
+    -Os
+```
+
 ## API Reference
 
 ### Wakeup Configuration
