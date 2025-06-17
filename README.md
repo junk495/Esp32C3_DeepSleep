@@ -1,4 +1,4 @@
-# Esp32-C3_DeepSleep Library
+# Esp32-C3 DeepSleep Library
 
 A simple and robust Arduino library for using the deep sleep features of the ESP32-C3, abstracting away the complexities of the ESP-IDF.
 
@@ -6,23 +6,23 @@ A simple and robust Arduino library for using the deep sleep features of the ESP
 
 ### Challenges with Arduino Platform
 
-- Incomplete ESP-IDF Integration: Arduino-ESP32 core lags behind ESP-IDF, with poor support for ESP32-C3-specific APIs like ```gpio_wakeup_enable()```.
-- Simplified Abstraction: Lacks fine-grained control over RTC-GPIOs, pull-ups, and power domains, leading to unreliable wake-ups and higher power consumption.
-- Pin Wake-up Instability: Floating pins or noisy inputs (e.g., from switches) cause false or missed wake-ups.
-- Version Dependency: Requires specific Arduino-ESP32 versions for ESP32-C3 support, adding complexity.
-- Debugging Challenges: Limited error reporting hinders troubleshooting.
+- **Incomplete ESP-IDF Integration:** Arduino-ESP32 core lags behind ESP-IDF, with poor support for ESP32-C3-specific APIs like ```gpio_wakeup_enable()```.
+- **Simplified Abstraction:** Lacks fine-grained control over RTC-GPIOs, pull-ups, and power domains, leading to unreliable wake-ups and higher power consumption.
+- **Pin Wake-up Instability:** Floating pins or noisy inputs (e.g., from switches) cause false or missed wake-ups.
+- **Version Dependency:** Requires specific Arduino-ESP32 versions for ESP32-C3 support, adding complexity.
+- **Debugging Challenges:** Limited error reporting hinders troubleshooting.
 
 ### Reliability of ESP-IDF
 
-- Native Support: Full access to ESP32-C3 hardware with APIs tailored for deep sleep and GPIO wake-up.
-- Fine-Grained Configuration: Precise control over GPIOs and power domains ensures stability and low power (<10 µA).
-- Robust Debouncing: Advanced interrupt handling minimizes false wake-ups.
-- Up-to-Date Features: Regular updates ensure compatibility and feature support.
-- Comprehensive Documentation: Detailed guides aid implementation and troubleshooting.
+- **Native Support:** Full access to ESP32-C3 hardware with APIs tailored for deep sleep and GPIO wake-up.
+- **Fine-Grained Configuration:** Precise control over GPIOs and power domains ensures stability and low power (<10 µA).
+- **Robust Debouncing:** Advanced interrupt handling minimizes false wake-ups.
+- **Up-to-Date Features:** Regular updates ensure compatibility and feature support.
+- **Comprehensive Documentation:** Detailed guides aid implementation and troubleshooting.
 
 ### Conclusion
 
-A dedicated Arduino library wrapping ESP-IDF’s deep sleep and GPIO wake-up APIs would combine Arduino’s simplicity with ESP-IDF’s reliability. It would provide easy-to-use functions, ensure compatibility, optimize power consumption, and enhance debugging, making it an ideal solution for reliable pin wake-up (e.g., GPIO4, LOW trigger) on the ESP32-C3 while retaining the Arduino ecosystem.
+A dedicated Arduino library wrapping ESP-IDF’s deep sleep and GPIO wake-up APIs combines Arduino’s simplicity with ESP-IDF’s reliability. It provides easy-to-use functions, ensures compatibility, optimizes power consumption, and enhances debugging, making it an ideal solution for reliable pin wake-up (e.g., GPIO4, LOW trigger) on the ESP32-C3 while retaining the Arduino ecosystem.
 
 This library was specifically developed and tested for ESP32-C3 based boards, such as the **Waveshare ESP32-C3-Zero**.
 
